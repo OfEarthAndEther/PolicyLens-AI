@@ -38,11 +38,18 @@ The simulator follows a modular AI architecture designed for scalability and res
 ## Directory Structure
 ```
 AI-Policy-Simulator/
-├── app.py              # Core application logic and LangChain orchestration
-├── requirements.txt    # Production dependencies (Gradio, LangChain, etc.)
-├── README.md           # Project documentation and technical overview
-├── assets/             # Images, screenshots, and simulation videos
-└── index.html          # Frontend code for embedding the simulator
+├── app.py                # Production entry point (Gradio + Gemini 2.5)
+├── requirements.txt      # Backend dependencies for Hugging Face deployment
+├── README.md             # Project documentation & technical roadmap
+├── notebooks/            # Research & Model Experimentation
+│   └── MyProject_Chat_Bot.ipynb  # Google Colab notebook for prompt testing
+├── web/                  # Custom Web Frontend (Decoupled UI)
+│   ├── AI_Policy_Simulator_GenAI_workshop.html        
+│   ├── AI_Policy_Simulator_GenAI_workshop.css         
+│   └── AI_Policy_Simulator_GenAI_workshop.js         
+└── assets/               # Screenshot and Simulation video
+    ├── Simulation.mp4    
+    └── ccbp_website.png      
 ```
 
 ## ENGINEERING MILESTONES
