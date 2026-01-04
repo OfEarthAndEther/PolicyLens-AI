@@ -6,13 +6,6 @@ __Developer__: Srishti | 2nd Year CSAI Student | NSUT __Tech Stack__: Google Gem
 ## THE VISION
 Most Large Language Models lack deep local socio-economic context. This project bridges that gap by creating a specialized Policy Analyst Persona. The simulator evaluates government policy changes (such as fuel taxes) and identifies second-order effects on BPL (Below Poverty Line) families, MSMEs, and the informal sector in India.
 
-* ![Website Interface](./assets/ccbp_website.png)
-* <div align="center">
-  <video src="assets/Simulation.mp4" width="100%" controls>
-    Your browser does not support the video tag.
-  </video>
-</div>
-
 ## SYSTEM ARCHITECTURE
 The simulator follows a modular AI architecture designed for scalability and resilience:
 
@@ -101,22 +94,10 @@ python app.py
 ## Live Links
 * Interactive App: [Hugging Face Space](https://ofearthandether-policy-simulator.hf.space)
 
-* Frontend Website: [CCBP Published Link](ofearthandether.ccbp.tech)
+https://github.com/user-attachments/assets/f0b89e6e-c9e3-427f-9156-a30fa9fb4f64
 
+* Frontend Website: [CCBP Published Link](https://ofearthandether.ccbp.tech)
+
+![CCBP WebApp Link](./assets/ccbp_website.png)
 
 ---
-title: Policy Simulator
-emoji: 🏃
-colorFrom: yellow
-colorTo: green
-sdk: gradio
-sdk_version: 6.2.0
-app_file: app.py
-pinned: false
-license: mit
-thumbnail: >-
-  https://cdn-uploads.huggingface.co/production/uploads/69511ddd4e62d3ceb0b074fd/a2AWUuo_aTMo9--HY5ZgF.png
-short_description: 'AI Policy Simulator: Analyzing risks and RAG future scope.'
----
-
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
