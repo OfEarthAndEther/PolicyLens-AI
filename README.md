@@ -11,14 +11,11 @@ The simulator follows a modular AI architecture designed for scalability and res
 
 * __Frontend (UI)__: A responsive web interface built on the CCBP Playground using HTML5, CSS3, and JavaScript, which embeds the logic layer.
   * Implements a responsive dashboard that embeds the AI engine via Gradio-app components.
-
 * __Logic Layer (Deployment)__: Hosted on Hugging Face Spaces for high availability.
   * Utilizes Gradio for an interactive UI featuring dynamic sliders and real-time chat history.
-
 * __Intelligence Engine__
   * __Framework__: LangChain for structured prompt orchestration.
   * __Model__: Gemini 2.5 Flash-Lite for optimized reasoning and high-throughput API handling.
-
 * __Architecture Diagram Concept__:     
 ```
 [User Input: Sliders] -> [Gradio Interface] -> [LangChain Prompt Template] -> [Gemini 2.5 Flash-Lite API] -> [Risk Analysis Output]
@@ -26,13 +23,9 @@ The simulator follows a modular AI architecture designed for scalability and res
 
 ## Technical Stack
 * __Language__: Python 3.10+
-
 * __LLM Engine__: Google Gemini 2.5 Flash-Lite
-
 * __Orchestration__: LangChain
-
 * __Web Framework__: Gradio 6.0
-
 * __Hosting__: Hugging Face Spaces & CCBP Code Playground
 
 ## Directory Structure
@@ -51,23 +44,6 @@ AI-Policy-Simulator/
     ├── Simulation.mp4    
     └── ccbp_website.png      
 ```
-
-## ENGINEERING MILESTONES
-
-1. __Handling Quota Constraints (The 429 Challenge)__
-During development, the flagship Gemini 2.0 Flash model hit strict rate limits (ResourceExhausted: 429).
-
-* __Resolution__: I performed a technical assessment and migrated the engine to Gemini 2.5 Flash-Lite. This increased the request ceiling from 200 to 1,000 requests per day, ensuring the simulator remains highly available for evaluators and public testing.
-
-2. __Security & Credential Engineering__
-To maintain professional security standards, I avoided hardcoding API keys.
-
-* __Resolution__: Implemented Hugging Face Secrets. The app.py script pulls the GOOGLE_API_KEY from the environment variables, ensuring that even if the repository is public on GitHub, the credentials remain encrypted and safe.
-
-3. __Compatibility Migration__
-The project was built during a transition period for UI frameworks.
-
-* __Resolution__: Navigated breaking changes in Gradio 6.0 (specifically the removal of the type argument in Chatbot) by refactoring the frontend logic to match the new native "messages" format.
 
 ## Setup & Installation
 
@@ -92,12 +68,6 @@ export GOOGLE_API_KEY="your_actual_api_key_here"
 python app.py
 ```
 
-## FUTURE ROADMAP
-* __RAG Integration:__ Implementing Retrieval-Augmented Generation to allow the AI to "read" actual __Union Budget PDF__ documents and provide data-backed risk scores.
-
-* __Socio-Economic Heatmaps:__ Visualizing the impact of policy changes across different __Indian states__ using a Python-based mapping library like __Folium__.
-
-
 ## Live Links
 * Interactive App: [Hugging Face Space](https://ofearthandether-policy-simulator.hf.space)
 
@@ -106,5 +76,29 @@ https://github.com/user-attachments/assets/f0b89e6e-c9e3-427f-9156-a30fa9fb4f64
 * Frontend Website: [CCBP Published Link](https://ofearthandether.ccbp.tech)
 
 ![CCBP WebApp Link](./assets/ccbp_website.png)
+
+---
+
+
+## ENGINEERING MILESTONES
+
+1. __Handling Quota Constraints (The 429 Challenge)__
+During development, the flagship Gemini 2.0 Flash model hit strict rate limits (ResourceExhausted: 429).
+  * __Resolution__: I performed a technical assessment and migrated the engine to Gemini 2.5 Flash-Lite. This increased the request ceiling from 200 to 1,000 requests per day, ensuring the simulator remains highly available for evaluators and public testing.
+
+2. __Security & Credential Engineering__
+To maintain professional security standards, I avoided hardcoding API keys.
+  * __Resolution__: Implemented Hugging Face Secrets. The app.py script pulls the GOOGLE_API_KEY from the environment variables, ensuring that even if the repository is public on GitHub, the credentials remain encrypted and safe.
+
+3. __Compatibility Migration__
+The project was built during a transition period for UI frameworks.
+  * __Resolution__: Navigated breaking changes in Gradio 6.0 (specifically the removal of the type argument in Chatbot) by refactoring the frontend logic to match the new native "messages" format.
+
+
+
+## FUTURE ROADMAP
+* __RAG Integration:__ Implementing Retrieval-Augmented Generation to allow the AI to "read" actual __Union Budget PDF__ documents and provide data-backed risk scores.
+
+* __Socio-Economic Heatmaps:__ Visualizing the impact of policy changes across different __Indian states__ using a Python-based mapping library like __Folium__.
 
 ---
